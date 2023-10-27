@@ -2,9 +2,9 @@
 
 namespace UnitTestingTask
 {
-    public class MaxNumberOfIdenticalLatinLetters : ISymbolsCounter
+    public class MaxNumberOfIdenticalLatinLettersCounter : ISymbolsCounter
     {
-        private static readonly MaxNumberIdenticalSymbolsWithConditionCounter _counter = new MaxNumberIdenticalSymbolsWithConditionCounter();
+        private static readonly MaxNumberOfIdenticalSymbolsWithConditionCounter _counter = new();
         public int Count(string input)
         {
             return _counter.Count(input, this.IsLatinLetter);

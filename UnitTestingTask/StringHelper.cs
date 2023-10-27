@@ -9,7 +9,7 @@
             {
                 if (predicate(line[i]))
                 {
-                    current = 1;
+                    current = i;
                     break;
                 }
             }
