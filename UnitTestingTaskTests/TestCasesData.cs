@@ -8,18 +8,16 @@ namespace UnitTestingTask.Tests
         {
             get
             {
-                yield return new TestCaseData("    ", 0);
+                yield return new TestCaseData(null, 0);
                 yield return new TestCaseData("", 0);
-                yield return new TestCaseData("12345",1);
-                yield return new TestCaseData("112233", 2);
-                yield return new TestCaseData("11122333344", 4);
-                yield return new TestCaseData("998877", 2);
-                yield return new TestCaseData("123321", 2);
-                yield return new TestCaseData("5555555", 7);
-                yield return new TestCaseData("0000", 4);
-                yield return new TestCaseData("987654321", 1);
-                yield return new TestCaseData("111000111", 3);
-                yield return new TestCaseData("999888777666555444", 3);
+                yield return new TestCaseData("1",1);
+                yield return new TestCaseData("22aaa", 2);
+                yield return new TestCaseData("aaa33aaa", 2);
+                yield return new TestCaseData("aaaa44", 2);
+                yield return new TestCaseData("55566", 3);
+                yield return new TestCaseData("77888", 3);
+                yield return new TestCaseData("99999", 5);
+                yield return new TestCaseData("9876543210", 1);
             }
         }
 
@@ -27,16 +25,15 @@ namespace UnitTestingTask.Tests
         {
             get
             {
-                yield return new TestCaseData("    ", 1);
                 yield return new TestCaseData("", 0);
-                yield return new TestCaseData("abcde", 5);
-                yield return new TestCaseData("aabbcc", 2);
-                yield return new TestCaseData("aaaabbbb", 2);
-                yield return new TestCaseData("xyzxyzxyz", 3);
-                yield return new TestCaseData("1234567890", 10);
-                yield return new TestCaseData("aaaAAAbbbBBB", 2);
-                yield return new TestCaseData("ababababab", 2);
-                yield return new TestCaseData("aaaaa", 1);
+                yield return new TestCaseData(null, 0);
+                yield return new TestCaseData("a", 1);
+                yield return new TestCaseData("bc", 2);
+                yield return new TestCaseData("Dd", 2);
+                yield return new TestCaseData("efgeee", 3);
+                yield return new TestCaseData("hiklgkmno", 6);
+                yield return new TestCaseData("pqrtsuvrqp", 7);
+                yield return new TestCaseData("wxyz", 4);
                 yield return new TestCaseData("abcABCabcABC", 6);
             }
         }
@@ -45,18 +42,14 @@ namespace UnitTestingTask.Tests
         {
             get
             {
-                yield return new TestCaseData("    ", 0);
+                yield return new TestCaseData(null, 0);
                 yield return new TestCaseData("", 0);
-                yield return new TestCaseData("abcdefg", 1);
-                yield return new TestCaseData("aabccdd", 2);
-                yield return new TestCaseData("abcdddef", 3);
-                yield return new TestCaseData("xxyyyyzz", 4);
-                yield return new TestCaseData("abcdefgh", 1);
-                yield return new TestCaseData("aaAAaaBBB", 3);
-                yield return new TestCaseData("aabbccDDEEFF", 2);
-                yield return new TestCaseData("aaaBBBcccDDD", 3);
-                yield return new TestCaseData("xyzXYZxyz", 1);
-                yield return new TestCaseData("aaaaaBBBbbCCCcc", 5);
+                yield return new TestCaseData("1", 0);
+                yield return new TestCaseData("A", 1);
+                yield return new TestCaseData("1111aaaAA", 3);
+                yield return new TestCaseData("111aaAAA", 3);
+                yield return new TestCaseData("AAAAA", 5);
+                yield return new TestCaseData("AAA11111", 3);
             }
         }
     }

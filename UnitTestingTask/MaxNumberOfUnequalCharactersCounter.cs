@@ -1,4 +1,6 @@
-﻿namespace UnitTestingTask
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace UnitTestingTask
 {
     public class MaxNumberOfUnequalCharactersCounter : ISymbolsCounter
     {
@@ -25,7 +27,11 @@
                 if (unique.Contains(input[i]))
                 {
                     max = Math.Max(max, unique.Count);
-                    unique.Clear();
+                    var firstIndex = unique.IndexOf(input[i]);
+                    for (int j = 0; j <= firstIndex; j++)
+                    {
+                        unique.RemoveAt(0);
+                    }
                 }
                 unique.Add(input[i]);
             }
